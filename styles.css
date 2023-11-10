@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2,
+h3 {
+  background-image: linear-gradient(to bottom, #333, #333, green);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+p,
+li {
+  color: #444;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 325px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.image::before {
+  content: '';
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px dashed greenyellow;
+  position: absolute;
+  top: 3px;
+  left: -3px;
+  background-color: transparent;
+}
+
+.image img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px dashed green;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 52px;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, green, green, greenyellow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+}
+
+header h2 {
+  font-size: 24px;
+  color: #444;
+}
+
+.ano-formatura {
+  display: inline-block;
+  background-color: greenyellow;
+  padding: 3px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+main {
+  max-width: 980px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.separador {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-about ul {
+  display: flex;
+}
+
+.box-about ul li {
+  font-size: 12px;
+  padding: 3px;
+  flex: 1;
+}
+
+.ano-rescisao {
+  display: block;
+  max-width: 140px;
+  width: auto;
+  text-align: left;
+  background-color: greenyellow;
+  padding: 3px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+
+.works p {
+  margin-bottom: 10px;
+}
+
+.contato {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contato ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contato ul li {
+  display: flex;
+  align-items: center;
+}
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) {
+  /* estilos aqui */
+  .container {
+    max-width: 480px;
+    width: 100%;
+    border: 1px solid;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 325px;
+    width: 100%;
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .image::before {
+    display: none;
+  }
+
+  .image img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px dashed green;
+  }
+
+  header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, green, green, greenyellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+
+  header h2 {
+    font-size: 20px;
+    color: #444;
+  }
+
+  .ano-formatura {
+    max-width: 120px;
+    display: block;
+    background-color: greenyellow;
+    padding: 3px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+
+  main {
+    max-width: 980px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .separador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .box-about ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .box-about ul li {
+    font-size: 12px;
+    padding: 3px;
+    flex: 1;
+  }
+
+  .ano-rescisao {
+    display: block;
+    max-width: 140px;
+    width: auto;
+    text-align: left;
+    background-color: greenyellow;
+    padding: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+  }
+
+  .works p {
+    margin-bottom: 10px;
+  }
+
+  .contato {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .contato ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .contato ul li {
+    margin: 10px 0;
+  }
+
+  .contato ul li span {
+    /* border: 1px solid #111; */
+    padding-right: 5px;
+  }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+  /* estilos aqui */
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* estilos aqui */
+  /* estilos aqui */
+  .container {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 325px;
+    width: 100%;
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .image::before {
+    display: none;
+  }
+
+  .image img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px dashed green;
+  }
+
+  header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, green, green, greenyellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+
+  header h2 {
+    font-size: 20px;
+    color: #444;
+  }
+
+  .ano-formatura {
+    max-width: 120px;
+    display: block;
+    background-color: greenyellow;
+    padding: 3px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+
+  main {
+    max-width: 980px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .separador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .box-about ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .box-about ul li {
+    font-size: 12px;
+    padding: 3px;
+    flex: 1;
+  }
+
+  .ano-rescisao {
+    display: block;
+    max-width: 140px;
+    width: auto;
+    text-align: left;
+    background-color: greenyellow;
+    padding: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+  }
+
+  .works p {
+    margin-bottom: 10px;
+  }
+
+  .contato {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .contato ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .contato ul li {
+    margin: 10px 0;
+  }
+
+  .contato ul li span {
+    /* border: 1px solid #111; */
+    padding-right: 5px;
+  }
+}
